@@ -1,4 +1,5 @@
-# [STATEMENT](http://codingdojo.org/kata/FooBarQix)
+
+# [STATEMENT](http://codingdojo.org/kata/FooBarQix) [![Build Status](https://travis-ci.com/benzinamohamedelyes/FooBarQix.svg?token=9Ly8gC3zrm9pNgP1snsx&branch=main)](https://travis-ci.com/benzinamohamedelyes/FooBarQix)
 You should implement a function String compute(String) which implements the following rules.
 
 ## Step 1
