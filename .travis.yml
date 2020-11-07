@@ -1,7 +1,7 @@
 language: csharp
 mono: latest
 dotnet: 3.1
-solution: FooBarQix.sln
+solution: ./FooBarQix/FooBarQix.sln
 script:
   - dotnet restore
   - dotnet build
