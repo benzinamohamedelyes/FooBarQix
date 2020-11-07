@@ -1,10 +1,15 @@
+using FooBarQix;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Tests
+namespace FooBarQix.Tests
 {
-    [TestClass]
+    [TestClass()]
     public class FooBarQixTests
     {
-
+        [TestMethod()]
+        public void ComputeShouldOnlyAcceptInts()
+        {
+            Assert.Fail();
+        }
     }
 }

@@ -1,0 +1,8 @@
+language: csharp
+mono: latest
+dotnet: 3.1
+solution: FooBarQix.sln
+script:
+  - dotnet restore
+  - dotnet build
+  - dotnet test Tests
