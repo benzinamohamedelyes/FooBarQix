@@ -3,6 +3,6 @@ mono: latest
 dotnet: 3.1
 solution: ./FooBarQix/FooBarQix.sln
 script:
-  - dotnet restore
-  - dotnet build
+  - dotnet restore FooBarQix
+  - dotnet build FooBarQix
   - dotnet test Tests

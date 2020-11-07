@@ -7,13 +7,12 @@ namespace FooBarQix
         static void Main(string[] args)
         {
 
-            Console.WriteLine(Compute(args[0]));
-            Console.ReadKey();
+            Compute(args[0]);
         }
-        public static string Compute(string number)
+        public static void Compute(string number)
         {
-            return number;
-            
+            Console.WriteLine(number);
+            Console.ReadKey();
         }
     }
 }
