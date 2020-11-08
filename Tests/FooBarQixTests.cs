@@ -56,6 +56,21 @@ namespace FooBarQix.Tests
             testString = new StringBuilder("33");
             Assert.AreEqual("FooFooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3 And Contains 3 two Times");
         }
+        [TestMethod()]
+        public void ComputeCanReplaceFiveByBar()
+        {
+            StringBuilder testString = new StringBuilder("3");
+            Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3 And Contains 3");
+
+            testString = new StringBuilder("5");
+            Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
+
+            testString = new StringBuilder("10");
+            Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
+
+            testString = new StringBuilder("55");
+            Assert.AreEqual("BarBarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5 And Contains 5 two Times");
+        }
         [TestMethod]
         public void ComputeCanDevideByFive()
         {
