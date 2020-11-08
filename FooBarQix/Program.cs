@@ -28,23 +28,23 @@ namespace FooBarQix
                     if (intResult % 3 == 0)
                     {
                         result.Insert(i, "Foo");
-                        i+=3;
+                        i += 3;
                     }
 
                     if (intResult % 5 == 0)
                     {
                         result.Insert(i, "Bar");
-                        i+=3;
+                        i += 3;
                     }
 
                     if (intResult % 7 == 0)
                     {
                         result.Insert(i, "Qix");
-                        i+=3;
+                        i += 3;
                     }
 
                 }
-                return result.ToString();
+                return result.ToString().Replace("0", "*");
             }
             else
             {
@@ -62,7 +62,7 @@ namespace FooBarQix
         }
         private static string RemoveIntegers(string input)
         {
-            return Regex.Replace(input, @"[\d-]", string.Empty);
+            return Regex.Replace(input, @"[1..9-]", string.Empty);
         }
     }
 }

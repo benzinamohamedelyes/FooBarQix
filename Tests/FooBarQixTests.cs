@@ -111,7 +111,7 @@ namespace FooBarQix.Tests
         public void ComputeCanReplaceZero()
         {
             StringBuilder testString = new StringBuilder("0");
-            Assert.AreEqual("*", Program.Compute(testString.ToString()), $"{testString.ToString()} Should Be Transformed To *");
+            Assert.AreEqual("FooBarQix*", Program.Compute(testString.ToString()), $"{testString.ToString()} Should Be Transformed To FooBarQix* Because 0 Can Be Divided By Any Number");
 
             testString = new StringBuilder("101");
             Assert.AreEqual("1*1", Program.Compute(testString.ToString()), $"{testString.ToString()} Should Be Transformed To 1*1");
