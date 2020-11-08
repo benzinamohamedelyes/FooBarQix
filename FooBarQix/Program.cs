@@ -22,7 +22,7 @@ namespace FooBarQix
 
                 if (ShouldBeTreated(number, intResult))
                 {
-                    string tempString = number.Replace("3", "Foo");
+                    string tempString = number.Replace("3", "Foo").Replace("5", "Bar");
                     result = new StringBuilder(RemoveIntegers(tempString));
 
                     if (intResult % 3 == 0)
@@ -41,7 +41,11 @@ namespace FooBarQix
         }
         private static bool ShouldBeTreated(string number, int intResult)
         {
-            return number.Contains("3") || intResult % 3 == 0 || intResult % 5 == 0 || intResult % 7 == 0;
+            return number.Contains("3") ||
+                number.Contains("5") ||
+                intResult % 3 == 0 ||
+                intResult % 5 == 0 ||
+                intResult % 7 == 0;
         }
         private static string RemoveIntegers(string input)
         {
