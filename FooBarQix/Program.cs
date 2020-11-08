@@ -13,7 +13,10 @@ namespace FooBarQix
         }
         public static string Compute(string number)
         {
-            return number;
+            if (int.TryParse(number, out int result))
+                return number;
+            else
+                return $"{number} is not a valid number";
         }
     }
 }
