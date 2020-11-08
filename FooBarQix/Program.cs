@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime;
 
 namespace FooBarQix
 {
@@ -7,12 +8,12 @@ namespace FooBarQix
         static void Main(string[] args)
         {
 
-            Compute(args[0]);
-        }
-        public static void Compute(string number)
-        {
-            Console.WriteLine(number);
+            Console.WriteLine(Compute(args[0]));
             Console.ReadKey();
+        }
+        public static string Compute(string number)
+        {
+            return number;
         }
     }
 }
