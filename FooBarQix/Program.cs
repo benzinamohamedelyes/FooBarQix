@@ -22,7 +22,7 @@ namespace FooBarQix
 
                 if (ShouldBeTreated(number, intResult))
                 {
-                    string tempString = number.Replace("3", "Foo").Replace("5", "Bar");
+                    string tempString = number.Replace("3", "Foo").Replace("5", "Bar").Replace("7", "Qix");
                     result = new StringBuilder(RemoveIntegers(tempString));
 
                     if (intResult % 3 == 0)
@@ -43,6 +43,7 @@ namespace FooBarQix
         {
             return number.Contains("3") ||
                 number.Contains("5") ||
+                number.Contains("7") ||
                 intResult % 3 == 0 ||
                 intResult % 5 == 0 ||
                 intResult % 7 == 0;

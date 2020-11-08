@@ -84,7 +84,7 @@ namespace FooBarQix.Tests
             Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 5");
 
             testString = new StringBuilder("5");
-            Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
+            Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
 
             testString = new StringBuilder("10");
             Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
@@ -102,7 +102,7 @@ namespace FooBarQix.Tests
             Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 7");
 
             testString = new StringBuilder("5");
-            Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
+            Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
 
             testString = new StringBuilder("7");
             Assert.AreEqual("QixQix", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
