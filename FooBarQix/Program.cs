@@ -62,7 +62,7 @@ namespace FooBarQix
         }
         private static string RemoveIntegers(string input)
         {
-            return Regex.Replace(input, @"[1..9-]", string.Empty);
+            return Regex.Replace(input, @"[1-9\-]", string.Empty);
         }
     }
 }

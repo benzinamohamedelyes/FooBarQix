@@ -57,7 +57,7 @@ namespace FooBarQix.Tests
             Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
 
             testString = new StringBuilder("10");
-            Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
+            Assert.AreEqual("Bar*", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
         }
         [TestMethod]
         public void ComputeCanDevideBySeven()
