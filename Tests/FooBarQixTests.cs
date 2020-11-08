@@ -54,5 +54,27 @@ namespace FooBarQix.Tests
             Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
 
         }
+        [TestMethod]
+        public void ComputeCanDevideBySeven()
+        {
+            StringBuilder testString = new StringBuilder("1");
+            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 7");
+
+            testString = new StringBuilder("2");
+            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 7");
+
+            testString = new StringBuilder("3");
+            Assert.AreEqual("Foo", Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 7");
+
+            testString = new StringBuilder("5");
+            Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
+
+            testString = new StringBuilder("7");
+            Assert.AreEqual("Qix", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
+
+            testString = new StringBuilder("14");
+            Assert.AreEqual("Qix", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
+
+        }
     }
 }
