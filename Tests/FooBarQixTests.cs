@@ -107,6 +107,15 @@ namespace FooBarQix.Tests
             testString = new StringBuilder("7553");
             Assert.AreEqual("QixQixBarBarFoo", Program.Compute(testString.ToString()), "Should Return QixQixBarBarFoo: Divisible By 7, Contains 7, Contains 5 two times, Contains 3");
         }
+        [TestMethod()]
+        public void ComputeCanReplaceZero()
+        {
+            StringBuilder testString = new StringBuilder("0");
+            Assert.AreEqual("*", Program.Compute(testString.ToString()), $"{testString.ToString()} Should Be Transformed To *");
+
+            testString = new StringBuilder("101");
+            Assert.AreEqual("1*1", Program.Compute(testString.ToString()), $"{testString.ToString()} Should Be Transformed To 1*1");
+        }
 
     }
 }
