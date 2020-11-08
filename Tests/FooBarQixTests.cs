@@ -22,10 +22,7 @@ namespace FooBarQix.Tests
         [TestMethod()]
         public void ComputeCanDevideByThree()
         {
-            StringBuilder testString = new StringBuilder("0");
-            Assert.AreEqual("Foo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3");
-
-            testString = new StringBuilder("1");
+            StringBuilder testString = new StringBuilder("1");
             Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 3");
 
             testString = new StringBuilder("2");
@@ -48,7 +45,7 @@ namespace FooBarQix.Tests
             Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 5");
 
             testString = new StringBuilder("3");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 5");
+            Assert.AreEqual("Foo", Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 5");
 
             testString = new StringBuilder("5");
             Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");

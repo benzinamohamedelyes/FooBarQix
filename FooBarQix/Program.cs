@@ -16,11 +16,13 @@ namespace FooBarQix
         {
             if (int.TryParse(number, out int intResult))
             {
-                StringBuilder result;
+
+                StringBuilder result = new StringBuilder(number);
                 if (intResult % 3 == 0)
                     result = new StringBuilder("Foo");
-                else
-                    return number;
+                if (intResult % 5 == 0)
+                    result = new StringBuilder("Bar");
+                
                 return result.ToString();
             }
                 
