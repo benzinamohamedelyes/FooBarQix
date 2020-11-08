@@ -23,13 +23,7 @@ namespace FooBarQix.Tests
         [TestMethod()]
         public void ComputeCanDevideByThree()
         {
-            StringBuilder testString = new StringBuilder("1");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 3");
-
-            testString = new StringBuilder("2");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 3");
-
-            testString = new StringBuilder("3");
+            StringBuilder testString = new StringBuilder("3");
             Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3");
 
             testString = new StringBuilder("6");
@@ -38,17 +32,8 @@ namespace FooBarQix.Tests
         [TestMethod()]
         public void ComputeCanReplaceThreeByFoo()
         {
-            StringBuilder testString = new StringBuilder("1");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 3");
-
-            testString = new StringBuilder("2");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 3");
-
-            testString = new StringBuilder("3");
+            StringBuilder testString = new StringBuilder("3");
             Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3 And Contains 3");
-
-            testString = new StringBuilder("6");
-            Assert.AreEqual("Foo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3");
 
             testString = new StringBuilder("13");
             Assert.AreEqual("Foo", Program.Compute(testString.ToString()), $"{testString.ToString()} Contains 3");
@@ -59,14 +44,8 @@ namespace FooBarQix.Tests
         [TestMethod()]
         public void ComputeCanReplaceFiveByBar()
         {
-            StringBuilder testString = new StringBuilder("3");
-            Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3 And Contains 3");
-
-            testString = new StringBuilder("5");
+            StringBuilder testString = new StringBuilder("5");
             Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
-
-            testString = new StringBuilder("10");
-            Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
 
             testString = new StringBuilder("55");
             Assert.AreEqual("BarBarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5 And Contains 5 two Times");
@@ -74,16 +53,7 @@ namespace FooBarQix.Tests
         [TestMethod]
         public void ComputeCanDevideByFive()
         {
-            StringBuilder testString = new StringBuilder("1");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 5");
-
-            testString = new StringBuilder("2");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 5");
-
-            testString = new StringBuilder("3");
-            Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 5");
-
-            testString = new StringBuilder("5");
+            StringBuilder testString = new StringBuilder("5");
             Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
 
             testString = new StringBuilder("10");
@@ -92,19 +62,7 @@ namespace FooBarQix.Tests
         [TestMethod]
         public void ComputeCanDevideBySeven()
         {
-            StringBuilder testString = new StringBuilder("1");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 7");
-
-            testString = new StringBuilder("2");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 7");
-
-            testString = new StringBuilder("3");
-            Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 7");
-
-            testString = new StringBuilder("5");
-            Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
-
-            testString = new StringBuilder("7");
+            StringBuilder testString = new StringBuilder("7");
             Assert.AreEqual("QixQix", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
 
             testString = new StringBuilder("14");
@@ -113,17 +71,8 @@ namespace FooBarQix.Tests
         [TestMethod()]
         public void ComputeCanReplaceSevenByQix()
         {
-            StringBuilder testString = new StringBuilder("3");
-            Assert.AreEqual("FooFoo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3 And Contains 3");
-
-            testString = new StringBuilder("5");
-            Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
-
-            testString = new StringBuilder("7");
+            StringBuilder testString = new StringBuilder("7");
             Assert.AreEqual("QixQix", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
-
-            testString = new StringBuilder("14");
-            Assert.AreEqual("Qix", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7");
 
             testString = new StringBuilder("17");
             Assert.AreEqual("Qix", Program.Compute(testString.ToString()), $"{testString.ToString()} Contains 7");
@@ -153,7 +102,7 @@ namespace FooBarQix.Tests
             Assert.AreEqual("FooQix", Program.Compute(testString.ToString()), "Should Return FooQix: Divisible By 7, Divisible By 3");
 
             testString = new StringBuilder("105");
-            Assert.AreEqual("FooBarQix", Program.Compute(testString.ToString()), "Should Return FooBarQix: Divisible By 3, Divisible By 5, Divisible By 7");
+            Assert.AreEqual("FooBarQixBar", Program.Compute(testString.ToString()), "Should Return FooBarQixBar: Divisible By 3, Divisible By 5, Divisible By 7, Contains 5");
 
             testString = new StringBuilder("7553");
             Assert.AreEqual("QixQixBarBarFoo", Program.Compute(testString.ToString()), "Should Return QixQixBarBarFoo: Divisible By 7, Contains 7, Contains 5 two times, Contains 3");

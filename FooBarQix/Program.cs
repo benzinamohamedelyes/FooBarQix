@@ -24,13 +24,25 @@ namespace FooBarQix
                 {
                     string tempString = number.Replace("3", "Foo").Replace("5", "Bar").Replace("7", "Qix");
                     result = new StringBuilder(RemoveIntegers(tempString));
-
+                    int i = 0;
                     if (intResult % 3 == 0)
-                        result.Insert(0, "Foo");
+                    {
+                        result.Insert(i, "Foo");
+                        i+=3;
+                    }
+
                     if (intResult % 5 == 0)
-                        result.Insert(0, "Bar");
+                    {
+                        result.Insert(i, "Bar");
+                        i+=3;
+                    }
+
                     if (intResult % 7 == 0)
-                        result.Insert(0, "Qix");
+                    {
+                        result.Insert(i, "Qix");
+                        i+=3;
+                    }
+
                 }
                 return result.ToString();
             }
