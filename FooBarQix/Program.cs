@@ -22,7 +22,9 @@ namespace FooBarQix
                     result = new StringBuilder("Foo");
                 if (intResult % 5 == 0)
                     result = new StringBuilder("Bar");
-                
+                if (intResult % 7 == 0)
+                    result = new StringBuilder("Qix");
+
                 return result.ToString();
             }
                 
