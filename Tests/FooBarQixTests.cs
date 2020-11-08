@@ -12,16 +12,18 @@ namespace FooBarQix.Tests
         public void ComputeShouldOnlyAcceptInts()
         {
             StringBuilder testString = new StringBuilder("A12");
-            Assert.AreEqual($"{testString} is not a valid number", Program.Compute(testString.ToString()), "Should Only Accept Valid Integer");
-            testString = new StringBuilder("12");
+            Assert.AreEqual($"{testString} is not a valid Integer", Program.Compute(testString.ToString()), "Should Only Accept Valid Integer");
+            testString = new StringBuilder("1");
             Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), "Should Return The Same Valid Integer String");
+            testString = new StringBuilder("1.5");
+            Assert.AreEqual($"{testString} is not a valid Integer", Program.Compute(testString.ToString()), "Should Return The Same Valid Integer String");
 
         }
         [TestMethod()]
         public void ComputeCanDevideByThree()
         {
             StringBuilder testString = new StringBuilder("0");
-            Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 3");
+            Assert.AreEqual("Foo", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 3");
 
             testString = new StringBuilder("1");
             Assert.AreEqual(testString.ToString(), Program.Compute(testString.ToString()), $"{testString.ToString()} Can Not Be Devided By 3");

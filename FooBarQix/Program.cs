@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime;
+using System.Text;
 
 namespace FooBarQix
 {
@@ -13,10 +14,18 @@ namespace FooBarQix
         }
         public static string Compute(string number)
         {
-            if (int.TryParse(number, out int result))
-                return number;
+            if (int.TryParse(number, out int intResult))
+            {
+                StringBuilder result;
+                if (intResult % 3 == 0)
+                    result = new StringBuilder("Foo");
+                else
+                    return number;
+                return result.ToString();
+            }
+                
             else
-                return $"{number} is not a valid number";
+                return $"{number} is not a valid Integer";
         }
     }
 }
