@@ -57,7 +57,7 @@ namespace FooBarQix.Tests
             Assert.AreEqual("BarBar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
 
             testString = new StringBuilder("10");
-            Assert.AreEqual("Bar", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
+            Assert.AreEqual("Bar*", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 5");
         }
         [TestMethod]
         public void ComputeCanDevideBySeven()
@@ -81,6 +81,15 @@ namespace FooBarQix.Tests
             Assert.AreEqual("QixQixQix", Program.Compute(testString.ToString()), $"{testString.ToString()} Is Divisible By 7 And Contains 7 two Times");
         }
         [TestMethod()]
+        public void ComputeCanReplaceZero()
+        {
+            StringBuilder testString = new StringBuilder("0");
+            Assert.AreEqual("FooBarQix*", Program.Compute(testString.ToString()), $"{testString.ToString()} Should Be Transformed To FooBarQix* Because 0 Can Be Divided By Any Number");
+
+            testString = new StringBuilder("101");
+            Assert.AreEqual("1*1", Program.Compute(testString.ToString()), $"{testString.ToString()} Should Be Transformed To 1*1");
+        }
+        [TestMethod()]
         public void ComputeCanDivideAndReplaceMultipleInteger()
         {
             StringBuilder testString = new StringBuilder("1");
@@ -102,11 +111,16 @@ namespace FooBarQix.Tests
             Assert.AreEqual("FooQix", Program.Compute(testString.ToString()), "Should Return FooQix: Divisible By 7, Divisible By 3");
 
             testString = new StringBuilder("105");
-            Assert.AreEqual("FooBarQixBar", Program.Compute(testString.ToString()), "Should Return FooBarQixBar: Divisible By 3, Divisible By 5, Divisible By 7, Contains 5");
+            Assert.AreEqual("FooBarQix*Bar", Program.Compute(testString.ToString()), "Should Return FooBarQixBar: Divisible By 3, Divisible By 5, Divisible By 7, Contains 0, Contains 5");
 
             testString = new StringBuilder("7553");
             Assert.AreEqual("QixQixBarBarFoo", Program.Compute(testString.ToString()), "Should Return QixQixBarBarFoo: Divisible By 7, Contains 7, Contains 5 two times, Contains 3");
-        }
 
+            testString = new StringBuilder("303");
+            Assert.AreEqual("FooFoo*Foo", Program.Compute(testString.ToString()), "Should Return FooFoo*Foo: Divisible By 3, Contains 3 two times, Contains 0");
+
+            testString = new StringBuilder("10101");
+            Assert.AreEqual("FooQix**", Program.Compute(testString.ToString()), "Should Return FooQix**: Divisible By 3, Divisible 7, Contains 0 two times");
+        }
     }
 }
