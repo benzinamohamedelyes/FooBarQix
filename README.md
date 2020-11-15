@@ -51,7 +51,7 @@ The function will take a number as a string in param and it should return either
 ## Technical stack
 In order to complete this kata, I choose the following stack:
 - language: `C#`, `.Net Core`
-- unit test framework: `MSTest`
+- unit test framework: `xUnit`
 
 I choose this stack because it is easy and fast to implement.
 ## Conception

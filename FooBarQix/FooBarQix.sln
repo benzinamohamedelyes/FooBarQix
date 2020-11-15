@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBarQix", "FooBarQix.csproj", "{75C090DB-282D-4EC4-891F-D6DBFC01FF28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooBarQix", "FooBarQix.csproj", "{75C090DB-282D-4EC4-891F-D6DBFC01FF28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Tests\Tests.csproj", "{8AE46D88-E487-47C2-BCB5-B16776424168}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBarQixTests", "..\FooBarQixTests\FooBarQixTests.csproj", "{DD61AAE7-103F-4FC4-9B7F-5C98C419DF18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{75C090DB-282D-4EC4-891F-D6DBFC01FF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C090DB-282D-4EC4-891F-D6DBFC01FF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C090DB-282D-4EC4-891F-D6DBFC01FF28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8AE46D88-E487-47C2-BCB5-B16776424168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AE46D88-E487-47C2-BCB5-B16776424168}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AE46D88-E487-47C2-BCB5-B16776424168}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AE46D88-E487-47C2-BCB5-B16776424168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD61AAE7-103F-4FC4-9B7F-5C98C419DF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD61AAE7-103F-4FC4-9B7F-5C98C419DF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD61AAE7-103F-4FC4-9B7F-5C98C419DF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD61AAE7-103F-4FC4-9B7F-5C98C419DF18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
